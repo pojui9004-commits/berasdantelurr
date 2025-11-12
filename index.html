@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safiyya Naila | Beras & Telur Berkualitas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #0a2a43;
+      --accent-color: #d4af37;
+      --text-color: #333;
+      --bg-color: #fff;
+      --soft-gray: #f7f7f7;
+    }
+    [data-theme="dark"] {
+      --bg-color: #0a0a0a;
+      --text-color: #f7f7f7;
+      --soft-gray: #222;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--primary-color);
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--accent-color);
+    }
+    .toggle-theme, .toggle-lang {
+      cursor: pointer;
+      margin-left: 1rem;
+      background: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+      border-radius: 8px;
+      padding: 0.3rem 0.7rem;
+      transition: all 0.3s;
+    }
+    .toggle-theme:hover, .toggle-lang:hover {
+      background: var(--accent-color);
+      color: #000;
+    }
+    .hero {
+      background: linear-gradient(rgba(10,42,67,0.6), rgba(10,42,67,0.6)), url('https://images.unsplash.com/photo-1605475128023-8a6b9a6f6578?auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 8rem 2rem;
+      animation: fadeIn 1s ease-in;
+    }
+    .hero h1 { font-size: 2.5rem; }
+    .hero p { font-size: 1.2rem; margin: 1rem 0 2rem; }
+    .btn {
+      background: var(--accent-color);
+      color: #000;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+    .btn:hover { background: #c19f33; transform: scale(1.05); }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--primary-color);
+    }
+    .services, .products, .testimonials {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .card {
+      background: var(--soft-gray);
+      border-radius: 15px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      height: 180px;
+      object-fit: cover;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.7rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .contact-form button {
+      background: var(--accent-color);
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .contact-form button:hover { background: #c19f33; }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+    }
+    footer {
+      background: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 768px) {
+      .hero h1 {font-size: 1.8rem;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Safiyya Naila</div>
+    <nav>
+      <a href="#home" data-id="nav-home">Beranda</a>
+      <a href="#about" data-id="nav-about">Tentang</a>
+      <a href="#services" data-id="nav-services">Layanan</a>
+      <a href="#products" data-id="nav-products">Katalog</a>
+      <a href="#contact" data-id="nav-contact">Kontak</a>
+    </nav>
+    <div>
+      <button class="toggle-theme">🌙</button>
+      <button class="toggle-lang">ID | EN</button>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <h1 data-id="hero-title">Mitra Terpercaya untuk Beras dan Telur Berkualitas</h1>
+    <p data-id="hero-tagline">Menyediakan produk segar, berkualitas, dan layanan profesional untuk bisnis serta rumah tangga Anda.</p>
+    <a href="https://wa.me/6282296316151" class="btn" target="_blank" data-id="cta">Hubungi Kami</a>
+  </section>
+
+  <section id="about">
+    <h2 data-id="about-title">Tentang Kami</h2>
+    <p data-id="about-text">Safiyya Naila adalah perusahaan yang bergerak di bidang distribusi bahan pangan, khususnya beras premium dan telur segar. Kami berkomitmen untuk menghadirkan produk berkualitas tinggi yang mendukung kebutuhan rumah tangga, bisnis kuliner, dan mitra usaha di seluruh Indonesia.</p>
+  </section>
+
+  <section id="services">
+    <h2 data-id="services-title">Layanan Kami</h2>
+    <div class="services">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1615485926073-d278a3c648b2?auto=format&fit=crop&w=900&q=80" alt="Beras Premium">
+        <h3>Pemasokan Beras Premium</h3>
+        <p>Kami menyediakan berbagai jenis beras berkualitas tinggi untuk kebutuhan rumah tangga dan bisnis kuliner.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1565958011702-44e211b41ff9?auto=format&fit=crop&w=900&q=80" alt="Telur Segar">
+        <h3>Telur Segar Berkualitas</h3>
+        <p>Telur ayam segar pilihan langsung dari peternak terpercaya dengan kontrol kualitas ketat.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1622522068690-d107bd2171df?auto=format&fit=crop&w=900&q=80" alt="Distribusi Cepat">
+        <h3>Layanan Pengiriman Cepat</h3>
+        <p>Pengiriman tepat waktu dengan armada terpercaya untuk menjaga kesegaran produk.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1611078489935-0cb964de46a6?auto=format&fit=crop&w=900&q=80" alt="Kemitraan Bisnis">
+        <h3>Kemitraan Bisnis</h3>
+        <p>Kami membuka peluang kerja sama dengan UMKM, restoran, dan toko retail di seluruh Indonesia.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2 data-id="products-title">Katalog Produk</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1605475128023-8a6b9a6f6578?auto=format&fit=crop&w=900&q=80" alt="Beras 5kg">
+        <h3>Beras Premium 5kg</h3>
+        <p>Beras pulen dan harum, cocok untuk keluarga.</p>
+        <strong>Rp 75.000</strong>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1585238341986-cbb9d1f33b9b?auto=format&fit=crop&w=900&q=80" alt="Telur Kampung">
+        <h3>Telur Ayam Kampung 10 Butir</h3>
+        <p>Telur segar kaya nutrisi langsung dari peternak lokal.</p>
+        <strong>Rp 32.000</strong>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1604152135912-04a232a39e4f?auto=format&fit=crop&w=900&q=80" alt="Beras Organik">
+        <h3>Beras Organik 10kg</h3>
+        <p>Tanpa pestisida, kualitas ekspor dan ramah lingkungan.</p>
+        <strong>Rp 140.000</strong>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1615486527504-3b3da401e3c7?auto=format&fit=crop&w=900&q=80" alt="Telur Peternakan">
+        <h3>Telur Peternakan Segar 1 Rak</h3>
+        <p>Telur ayam negeri segar dengan ukuran seragam.</p>
+        <strong>Rp 55.000</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2 data-id="testimonials-title">Testimoni Klien</h2>
+    <div class="testimonials">
+      <div class="card"><p>Pelayanannya cepat dan kualitas berasnya sangat baik!</p><strong>– Andi Nurul Mutmainna</strong></div>
+      <div class="card"><p>Telurnya selalu segar, cocok untuk usaha kuliner saya.</p><strong>– Nurul Aulia</strong></div>
+      <div class="card"><p>Sudah langganan lama, pengiriman selalu tepat waktu.</p><strong>– Nurnadillah</strong></div>
+      <div class="card"><p>Harga bersaing dengan kualitas premium.</p><strong>– Anjelista Mayabubun</strong></div>
+      <div class="card"><p>Rekomendasi terbaik untuk kebutuhan bahan pokok.</p><strong>– Saniyuniati Rasid</strong></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 data-id="contact-title">Kontak Kami</h2>
+    <div class="contact-form">
+      <input type="text" placeholder="Nama" />
+      <input type="email" placeholder="Email" />
+      <textarea rows="4" placeholder="Pesan Anda"></textarea>
+      <button>Kirim Pesan</button>
+    </div>
+    <br />
+    <p><strong>Alamat:</strong> Jl. Abubakar Lambogo No.185, Bara-Baraya Timur, Kota Makassar, Sulawesi Selatan</p>
+    <p><a href="https://wa.me/6282296316151" target="_blank" style="color:var(--accent-color);text-decoration:none;font-weight:600;">Hubungi via WhatsApp</a></p>
+    <iframe src="https://www.google.com/maps/embed?pb=!4v1731400000!6m8!1m7!1s14nbMWpjiM7W8L5v8!2m2!1d-5.149!2d119.437!3f0!4f0!5f0.7820865974627469" allowfullscreen></iframe>
+  </section>
+
+  <footer>
+    &copy; 2025 Safiyya Naila. Semua Hak Dilindungi. | <a href="#home" style="color:#fff;">Kembali ke atas</a>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const toggleBtn = document.querySelector('.toggle-theme');
+    toggleBtn.addEventListener('click', () => {
+      const theme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.body.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    });
+    if (localStorage.getItem('theme') === 'dark') document.body.setAttribute('data-theme', 'dark');
+
+    // Language toggle
+    const toggleLang = document.querySelector('.toggle-lang');
+    const textMap = {
+      "hero-title": ["Mitra Terpercaya untuk Beras dan Telur Berkualitas","Your Trusted Partner for Quality Rice and Eggs"],
+      "hero-tagline": ["Menyediakan produk segar, berkualitas, dan layanan profesional untuk bisnis serta rumah tangga Anda.","Providing fresh, high-quality products and professional service for your home or business."],
+      "cta": ["Hubungi Kami","Contact Us"],
+      "nav-home": ["Beranda","Home"],
+      "nav-about": ["Tentang","About"],
+      "nav-services": ["Layanan","Services"],
+      "nav-products": ["Katalog","Catalog"],
+      "nav-contact": ["Kontak","Contact"],
+      "about-title": ["Tentang Kami","About Us"],
+      "services-title": ["Layanan Kami","Our Services"],
+      "products-title": ["Katalog Produk","Product Catalog"],
+      "testimonials-title": ["Testimoni Klien","Client Testimonials"],
+      "contact-title": ["Kontak Kami","Contact Us"]
+    };
+    let isEnglish = false;
+    toggleLang.addEventListener('click', () => {
+      isEnglish = !isEnglish;
+      for (const id in textMap) {
+        document.querySelectorAll(`[data-id="${id}"]`).forEach(el => {
+          el.textContent = textMap[id][isEnglish ? 1 : 0];
+        });
+      }
+    });
+  </script>
+</body>
+</html>
